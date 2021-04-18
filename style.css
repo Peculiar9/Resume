@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -12,36 +11,44 @@ body{
 .paper{
 	display: flex;
     position: absolute;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
     left: 50%;
     top: 50%;
 	color: rgb(73, 73, 73);
-	height: auto;
-	overflow-y: visible;
+	height: 100%;
+	overflow: scroll;
     transform: translate(-50%, -50%);
     background-color: pink;
     /* padding: 1rem .75rem; */
     border-radius: 1rem;
 	flex-direction: column;
 }
-.head::after{
-	background: #000;
-}
+
 .achievement{
 	row-gap: 12px;
-}
-.head{
-	z-index: 20;
+}.head{
+	z-index: 100;
 	display: flex;
-	height: 7em;
+	height: 300px;
 	flex-direction: column;
 	/* padding: 25%; */
 	overflow-y: visible;
 	margin: 0;
+	font-size: 2em;
+	
+	padding-top: 1.5em;
 	text-align: center;
 	width: 100%;
+	position: relative;
 	color: whitesmoke;
 	background: url(./dev.jpeg);
+}
+.head h2{
+	font-weight: bolder;
+}
+
+.list .list-items{
+	line-height: 25px;
 }
 .row{
 	display: flex;
@@ -49,9 +56,10 @@ body{
 
 }
 .right-panel{
-   width: 70%;
+   width: 65%;
    background: red;
    display: flex;
+   row-gap: 12px;
    justify-items: flex-start;
 	flex-direction: column;
 	justify-content: space-between ;
@@ -65,7 +73,7 @@ body{
 	row-gap: 2.3em;
 	flex-direction: column;
 	justify-content: space-between ;
-	width: 30%;
+	width: 35%;
 	background: rgb(247, 241, 241);
  }
 .left-panel > div{
@@ -80,7 +88,12 @@ body{
 .contact li{
    padding: .8em .4em;
 }
-
+.personal-profile, .education, .achievement{
+	line-height: 25px;
+}
+.right-panel > div{
+	line-height: 25px;
+}
 @media screen and (min-width : 768px) {
 	ROW{
 		flex-direction: column;
